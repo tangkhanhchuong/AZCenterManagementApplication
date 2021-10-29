@@ -7,11 +7,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-const CourseListTable = () => {
+const LessonsTable = () => {
 
   const columns = [
     {
-      name: "Course Title", options: {
+      name: "Course Information", options: {
         filterOptions: { fullWidth: true },
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
@@ -19,40 +19,19 @@ const CourseListTable = () => {
       }
     },
     {
-      name: "Course Code", options: {
+      name: "Attendance", options: {
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         }
       }
     },
     {
-      name: "Learning Level", options: {
+      name: "Status Of Reports", options: {
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         }
       }
-    },
-    {
-      name: "Enrolled Students(s)", options: {
-        customHeadLabelRender: (columnMeta) => {
-          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
-        }
-      }
-    },
-    {
-      name: "Course Fee", options: {
-        customHeadLabelRender: (columnMeta) => {
-          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
-        }
-      }
-    },
-    {
-      name: "Description", options: {
-        customHeadLabelRender: (columnMeta) => {
-          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
-        }
-      }
-    },
+    }
   ];
 
   const options = {
@@ -72,20 +51,13 @@ const CourseListTable = () => {
   };
 
   const data = [
-    ['Ielts 7.0', 'APL1B15', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B16', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B17', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B18', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B19', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B20', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B21', 'Advance', 50, 2000, 'This is Best Course'],
-    ['Ielts 7.0', 'APL1B22', 'Advance', 50, 2000, 'This is Best Course'],
+    'This is Lessons'
   ];
 
   return (
     <ThemeProvider theme={createTheme()}>
       <MUIDataTable
-        title={"Courses List"}
+        title={"Lessons"}
         data={data}
         columns={columns}
         options={options}
@@ -94,4 +66,4 @@ const CourseListTable = () => {
   );
 }
 
-export default CourseListTable;
+export default LessonsTable;

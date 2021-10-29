@@ -84,6 +84,25 @@ export const navigations = [
     ],
   },
   {
+    label: 'Profiles',
+    type: 'label',
+  },
+  {
+    name: 'Administrator',
+    icon: 'school',
+    path: '/profiles/admins'
+  },
+  {
+    name: 'Instructor',
+    icon: 'school',
+    path: '/profiles/instructors'
+  },
+  {
+    name: 'Student',
+    icon: 'school',
+    path: '/profiles/students'
+  },
+  {
     label: 'Pages',
     type: 'label',
   },

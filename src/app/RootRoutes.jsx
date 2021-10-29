@@ -13,6 +13,7 @@ import mapRoutes from './views/map/MapRoutes'
 
 import studentRoutes from './views/students/StudentRoutes'
 import schedulingRoutes from './views/Scheduling/SchedulingRoutes'
+import profilesRoutes from './views/Profiles/ProfilesRoutes'
 
 
 const redirectRoute = [
@@ -35,6 +36,7 @@ const routes = [
   ...utilitiesRoutes,
   ...studentRoutes,
   ...schedulingRoutes,
+  ...profilesRoutes,
   ...chartsRoute,
   ...dragAndDropRoute,
   ...formsRoutes,

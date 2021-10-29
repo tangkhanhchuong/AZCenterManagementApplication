@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-const CourseListTable = () => {
+const EnrollmentsTable = () => {
 
   const columns = [
     {
@@ -94,4 +94,4 @@ const CourseListTable = () => {
   );
 }
 
-export default CourseListTable;
+export default EnrollmentsTable;

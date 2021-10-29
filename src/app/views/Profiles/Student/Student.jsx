@@ -6,16 +6,16 @@ import {
 } from '@material-ui/core'
 
 import { Breadcrumb, SimpleCard } from 'app/components'
-import CoursesListTable from './CoursesListTable'
+import StudentTable from './StudentTable'
 
-const Lessons = () => {
+const Student = () => {
   return (
     <div className='m-sm-30'>
       <div className='mb-sm-30'>
         <Breadcrumb
           routeSegments={[
-            { name: 'Courses', path: '/lessons/list' },
-            { name: 'Lessons' },
+            { name: 'Profiles', path: '/profiles/students' },
+            { name: 'Students' },
           ]}
         />
       </div>
@@ -56,9 +56,9 @@ const Lessons = () => {
         </Grid>
       </SimpleCard>
       <div className='py-3' />
-      <CoursesListTable />
+      <StudentTable />
     </div>
   )
 }
 
-export default Lessons
+export default Student

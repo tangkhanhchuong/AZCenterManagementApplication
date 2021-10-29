@@ -1,20 +1,62 @@
 import React from 'react'
+import {
+  Button,
+  Grid,
+  TextField,
+} from '@material-ui/core'
 
-import { Breadcrumb } from 'app/components'
+import { Breadcrumb, SimpleCard } from 'app/components'
+import EnrollmentsTable from './EnrollmentsTable'
 
 const Enrollments = () => {
   return (
-    <div>
-      <div className="m-sm-30">
-        <div className="mb-sm-30">
-          <Breadcrumb
-            routeSegments={[
-              { name: 'Course', path: '/courses/list' },
-              { name: 'Enrollments' },
-            ]}
-          />
-        </div>
+    <div className='m-sm-30'>
+      <div className='mb-sm-30'>
+        <Breadcrumb
+          routeSegments={[
+            { name: 'Courses', path: '/enrollments/list' },
+            { name: 'Enrollments' },
+          ]}
+        />
       </div>
+      <SimpleCard title='Advanced Search'>
+        <Grid container spacing={6}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+        </Grid>
+        <Grid container spacing={6}>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+          <Grid item lg={3} md={3} sm={6} xs={6}>
+            <TextField className='mb-1 w-full' id='outlined-basic' label='Outlined' size='small' variant='outlined' />
+          </Grid>
+        </Grid>
+        <Grid container spacing={6}>
+          <Grid item lg={9} md={9} sm={6} xs={18}></Grid>
+          <Grid justifyContent="flex-end" container item lg={3} md={3} sm={6} xs={6}>
+            <Button variant='contained' color='primary' onClick={() => { }}>Search</Button>
+          </Grid>
+        </Grid>
+      </SimpleCard>
+      <div className='py-3' />
+      <EnrollmentsTable />
     </div>
   )
 }

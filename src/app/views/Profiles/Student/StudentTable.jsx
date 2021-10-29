@@ -7,7 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-const CourseListTable = () => {
+const StudentTable = () => {
 
   const columns = [
     {
@@ -85,7 +85,7 @@ const CourseListTable = () => {
   return (
     <ThemeProvider theme={createTheme()}>
       <MUIDataTable
-        title={"Courses List"}
+        title={"Students"}
         data={data}
         columns={columns}
         options={options}
@@ -94,4 +94,4 @@ const CourseListTable = () => {
   );
 }
 
-export default CourseListTable;
+export default StudentTable;
