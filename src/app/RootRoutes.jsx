@@ -11,10 +11,9 @@ import dragAndDropRoute from './views/Drag&Drop/DragAndDropRoute'
 import formsRoutes from './views/forms/FormsRoutes'
 import mapRoutes from './views/map/MapRoutes'
 
-import studentRoutes from './views/students/StudentRoutes'
-import schedulingRoutes from './views/Scheduling/SchedulingRoutes'
-import profilesRoutes from './views/Profiles/ProfilesRoutes'
-
+import schedulingRoutes from './modules/Scheduling/SchedulingRoutes'
+import profilesRoutes from './modules/Profiles/ProfilesRoutes'
+import chatRoutes from './views/Chat/ChatRoutes'
 
 const redirectRoute = [
   {
@@ -34,7 +33,7 @@ const routes = [
   ...dashboardRoutes,
   ...materialRoutes,
   ...utilitiesRoutes,
-  ...studentRoutes,
+  ...chatRoutes,
   ...schedulingRoutes,
   ...profilesRoutes,
   ...chartsRoute,

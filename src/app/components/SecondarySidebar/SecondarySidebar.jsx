@@ -5,16 +5,17 @@ import SecondarySidenavTheme from '../MatxTheme/SecondarySidenavTheme/SecondaryS
 import useSettings from 'app/hooks/useSettings'
 
 const SecondarySidebar = () => {
-    const { settings } = useSettings()
-    const secondarySidebarTheme =
-        settings.themes[settings.secondarySidebar.theme]
+	const { settings } = useSettings()
+	const secondarySidebarTheme = settings.themes[settings.secondarySidebar.theme]
 
-    return (
-        <SecondarySidenavTheme theme={secondarySidebarTheme}>
-            {settings.secondarySidebar.open && <SecondarySidebarContent />}
-            <SecondarySidebarToggle />
-        </SecondarySidenavTheme>
-    )
+	return (
+		<div style={{ zIndex: 200 }}>
+			<SecondarySidenavTheme theme={secondarySidebarTheme}>
+				{settings.secondarySidebar.open && <SecondarySidebarContent />}
+				<SecondarySidebarToggle />
+			</SecondarySidenavTheme>
+		</div>
+	)
 }
 
 export default SecondarySidebar

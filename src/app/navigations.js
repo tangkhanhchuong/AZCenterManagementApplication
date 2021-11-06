@@ -7,7 +7,117 @@ export const navigations = [
     icon: 'home'
   },
   {
-    label: 'Scheduling',
+    label: 'Management',
+    type: 'label'
+  },
+  {
+    name: 'Course',
+    icon: 'home',
+    children: [
+      {
+        name: 'Courses List',
+        iconText: 'SI',
+        path: '/courses/list'
+      },
+      {
+        name: 'Add Course',
+        iconText: 'SI',
+        path: '/courses/add'
+      }
+    ]
+  },
+  {
+    name: 'Class',
+    icon: 'home',
+    children: [
+      {
+        name: 'Classes List',
+        iconText: 'SI',
+        path: '/classes/list'
+      },
+      {
+        name: 'Add Course',
+        iconText: 'SI',
+        path: '/classes/add'
+      }
+    ]
+  },
+  {
+    name: 'Room',
+    icon: 'home',
+    children: [
+      {
+        name: 'Rooms List',
+        iconText: 'SI',
+        path: '/rooms/list'
+      },
+      {
+        name: 'Add Room',
+        iconText: 'SI',
+        path: '/rooms/add'
+      }
+    ]
+  },
+  {
+    name: 'Admin',
+    path: '/dashboard',
+    icon: 'home'
+  },
+  {
+    name: 'Enrollment',
+    icon: 'home',
+    children: [
+      {
+        name: 'Enrollments List',
+        iconText: 'SI',
+        path: '/enrollments/list'
+      },
+      {
+        name: 'Enroll First Course',
+        iconText: 'SI',
+        path: '/enrollments/first-course'
+      },
+      {
+        name: 'Enroll Next Course',
+        iconText: 'SI',
+        path: '/enrollments/next-course'
+      }
+    ]
+  },
+  {
+    name: 'Student',
+    icon: 'home',
+    children: [
+      {
+        name: 'Students List',
+        iconText: 'SI',
+        path: '/students/list'
+      },
+      {
+        name: 'Add Student',
+        iconText: 'SI',
+        path: '/students/add'
+      }
+    ]
+  },
+  {
+    name: 'Instructor',
+    icon: 'home',
+    children: [
+      {
+        name: 'Instructors List',
+        iconText: 'SI',
+        path: '/instructors/list'
+      },
+      {
+        name: 'Add Instructor',
+        iconText: 'SI',
+        path: '/instructors/add'
+      }
+    ]
+  },
+  {
+    label: 'Extra',
     type: 'label',
   },
   {
@@ -17,22 +127,27 @@ export const navigations = [
       {
         name: 'Courses List',
         iconText: 'SI',
-        path: '/courses/list'
+        path: '/scheduling/courses/list'
       },
       {
-        name: 'Lessons',
+        name: 'Classes List',
         iconText: 'SI',
-        path: '/courses/lessons'
+        path: '/scheduling/classes/list'
+      },
+      {
+        name: 'Rooms List',
+        iconText: 'SI',
+        path: '/scheduling/rooms/list'
       },
       {
         name: "Bookings",
         iconText: 'SI',
-        path: '/courses/bookings'
+        path: '/scheduling/courses/bookings'
       },
       {
         name: 'Enrollments',
         iconText: 'SI',
-        path: '/courses/enrollments'
+        path: '/scheduling/courses/enrollments'
       }
     ],
   },
@@ -95,12 +210,12 @@ export const navigations = [
   {
     name: 'Instructor',
     icon: 'school',
-    path: '/profiles/instructors'
+    path: '/profiles/instructors/list'
   },
   {
     name: 'Student',
     icon: 'school',
-    path: '/profiles/students'
+    path: '/profiles/students/list'
   },
   {
     label: 'Pages',
@@ -219,11 +334,52 @@ export const navigations = [
     ],
   },
   {
+    name: 'Form',
+    icon: 'format_list_bulleted',
+    children: [
+      {
+        name: 'Baisc',
+        path: '/forms/basic',
+        iconText: 'C',
+        auth: authRoles.admin,
+      },
+      {
+        name: 'Editor',
+        path: '/forms/editor',
+        iconText: 'C',
+        auth: authRoles.admin,
+      },
+      {
+        name: 'Upload',
+        path: '/forms/upload',
+        iconText: 'C',
+        auth: authRoles.admin,
+      },
+      {
+        name: 'Invoice',
+        path: '/forms/invoice',
+        iconText: 'C',
+        auth: authRoles.admin,
+      },
+      {
+        name: 'Order',
+        path: '/forms/order',
+        iconText: 'C',
+        auth: authRoles.admin,
+      }
+    ]
+  },
+  {
+    name: 'Chat Box',
+    icon: 'school',
+    path: '/chat'
+  },
+  {
     name: 'Utilities',
     icon: 'format_list_bulleted',
     children: [
       {
-        name: 'Color',      
+        name: 'Color',
         path: '/utilities/color',
         iconText: 'C',
         auth: authRoles.admin,

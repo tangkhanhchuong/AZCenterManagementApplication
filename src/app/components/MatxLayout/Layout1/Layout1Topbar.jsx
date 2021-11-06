@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
     Icon,
     IconButton,
@@ -9,7 +10,6 @@ import {
 } from '@material-ui/core'
 import { MatxMenu, MatxSearchBox } from 'app/components'
 import NotificationBar from '../../NotificationBar/NotificationBar'
-import { Link } from 'react-router-dom'
 import ShoppingCart from '../../ShoppingCart/ShoppingCart'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import clsx from 'clsx'
