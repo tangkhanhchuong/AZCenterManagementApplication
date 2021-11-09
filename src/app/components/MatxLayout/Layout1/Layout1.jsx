@@ -15,6 +15,8 @@ import SidenavTheme from '../../MatxTheme/SidenavTheme/SidenavTheme'
 import { makeStyles } from '@material-ui/core/styles'
 import useSettings from 'app/hooks/useSettings'
 
+const bgImageUrl = 'https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg'
+
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   contentWrap: ({ width, secondarySidebar }) => {
     return {
@@ -120,6 +122,8 @@ const Layout1 = () => {
                 </ThemeProvider>
               )}
             <div className="relative flex-grow">
+
+              {/* <img src={bgImageUrl} style={{ width: '100%', height: '80vh', opacity: 0.95, filter: 'brightness(80%)' }} /> */}
               <MatxSuspense>{renderRoutes(routes)}</MatxSuspense>
             </div>
             {settings.footer.show && !settings.footer.fixed && (
