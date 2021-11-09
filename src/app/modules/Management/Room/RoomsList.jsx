@@ -3,7 +3,7 @@ import React from 'react'
 import { Breadcrumb } from 'app/components'
 import RoomTable from './RoomTable'
 
-const Room = () => {
+const RoomsList = () => {
 
   return (
     <div className='m-sm-30'>
@@ -20,4 +20,4 @@ const Room = () => {
   )
 }
 
-export default Room
+export default RoomsList

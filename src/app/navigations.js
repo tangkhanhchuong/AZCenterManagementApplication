@@ -117,6 +117,67 @@ export const navigations = [
     ]
   },
   {
+    label: 'Schedule',
+    type: 'label',
+  },
+  {
+    name: 'Room Schedule',
+    icon: 'home',
+    path: '/room-schedule'
+  },
+  {
+    name: 'Leave',
+    icon: 'home',
+    children: [
+      {
+        name: 'Leave Requests List',
+        iconText: 'SI',
+        path: '/leaves/request'
+      },
+      {
+        name: 'Add Leave Request',
+        iconText: 'SI',
+        path: '/leaves/add'
+      }
+    ]
+  },
+  {
+    label: 'Finance',
+    type: 'label',
+  },
+  {
+    name: 'Invoice',
+    icon: 'home',
+    children: [
+      {
+        name: 'Invoices List',
+        iconText: 'SI',
+        path: '/invoices/list'
+      },
+      {
+        name: 'Add Invoice',
+        iconText: 'SI',
+        path: '/invoices/add'
+      }
+    ]
+  },
+  {
+    name: 'Expense',
+    icon: 'home',
+    children: [
+      {
+        name: 'Expenses List',
+        iconText: 'SI',
+        path: '/expenses/list'
+      },
+      {
+        name: 'Add Expense',
+        iconText: 'SI',
+        path: '/expenses/add'
+      }
+    ]
+  },
+  {
     label: 'Extra',
     type: 'label',
   },

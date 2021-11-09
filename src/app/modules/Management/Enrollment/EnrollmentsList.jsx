@@ -1,22 +1,23 @@
 import React from 'react'
 
 import { Breadcrumb } from 'app/components'
-import ClassTable from './ClassTable'
+import EnrollmentsTable from './EnrollmentsTable'
 
-const Class = () => {
+const EnrollmentsList = () => {
+
   return (
     <div className='m-sm-30'>
       <div className='mb-sm-30'>
         <Breadcrumb
           routeSegments={[
-            { name: 'Classes', path: '/classes/list' },
-            { name: 'Classes List' },
+            { name: 'Enrollments', path: '/enrollments/list' },
+            { name: 'Enrollments List' }
           ]}
         />
       </div>
-      <ClassTable />
+      <EnrollmentsTable />
     </div>
   )
 }
 
-export default Class
+export default EnrollmentsList

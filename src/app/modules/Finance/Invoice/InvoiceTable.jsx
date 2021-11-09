@@ -7,7 +7,7 @@ import { createTheme } from '@mui/material/styles'
 import { IconButton } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add'
 
-const EnrollmentTable = () => {
+const InvoiceTable = () => {
   const history = useHistory()
 
   const onRowClick = (data) => {
@@ -17,7 +17,7 @@ const EnrollmentTable = () => {
 
   const columns = [
     {
-      name: 'Course ID', options: {
+      name: 'Invoice ID', options: {
         filterOptions: { fullWidth: true },
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
@@ -25,42 +25,62 @@ const EnrollmentTable = () => {
       }
     },
     {
-      name: 'Course Name', options: {
+      name: 'Student ID', options: {
+        filterOptions: { fullWidth: true },
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         }
       }
     },
     {
-      name: 'Program', options: {
+      name: 'Student Name', options: {
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         }
       }
     },
     {
-      name: 'Learning Level', options: {
+      name: 'Course ID', options: {
+        customHeadLabelRender: (columnMeta) => {
+          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
+        }
+      }
+    },
+    {
+      name: 'Class ID', options: {
+        customHeadLabelRender: (columnMeta) => {
+          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
+        }
+      }
+    },
+    {
+      name: 'Created Date', options: {
+        customHeadLabelRender: (columnMeta) => {
+          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
+        }
+      }
+    },
+    {
+      name: 'Invoice Deadline', options: {
+        customHeadLabelRender: (columnMeta) => {
+          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
+        }
+      }
+    },
+    {
+      name: 'Paid Date', options: {
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         },
         customBodyRender: (label) => {
-          let colorClass
-          if (label === 'Basic') colorClass = 'green'
-          else if (label === 'Intermediate') colorClass = 'secondary'
-          else if (label === 'Advance') colorClass = 'error'
-          return <div className='flex'><div className={`px-3 text-11 py-3px border-radius-4 text-white bg-${colorClass} mr-3`}>{label}</div></div>
+          if (!label)
+            return <div className='flex'><div className={`px-3 text-11 py-3px border-radius-4 text-white bg-error mr-3`}>Unpaid</div></div>
+          return label
         }
       }
     },
     {
-      name: 'Enrolled Student(s)', options: {
-        customHeadLabelRender: (columnMeta) => {
-          return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
-        }
-      }
-    },
-    {
-      name: 'Course Fee', options: {
+      name: 'Note', options: {
         customHeadLabelRender: (columnMeta) => {
           return <div style={{ marginLeft: '-16px' }}>{columnMeta.label}</div>
         }
@@ -82,34 +102,22 @@ const EnrollmentTable = () => {
       console.log(action)
       console.dir(state)
     },
-    onRowClick: onRowClick,
-    customToolbar: () => (
-      <Link to='/enrollments/add'>
-        <IconButton
-          aria-label='add'
-        >
-          <AddIcon />
-        </IconButton>
-      </Link>
-    )
+    onRowClick: onRowClick
   }
 
   const data = [
-    ['APL1B15', 'Ielts 450', 'Toeic', 'Basic', 50, 2000],
-    ['APL1B16', 'Toeic 500', 'Toeic', 'Basic', 50, 2000],
-    ['APL1B17', 'Toeic 600', 'Toeic', 'Intermediate', 50, 2000],
-    ['APL1B18', 'Toeic 650', 'Toeic', 'Intermediate', 50, 2000],
-    ['APL1B18', 'Toeic 700', 'Toeic', 'Basic', 50, 2000],
-    ['APL1B19', 'Ielts 5.0', 'Ielts', 'Basic', 50, 2000],
-    ['APL1B20', 'Ielts 6.0', 'Ielts', 'Intermediate', 50, 2000],
-    ['APL1B21', 'Ielts 6.5', 'Ielts', 'Intermediate', 50, 2000],
-    ['APL1B22', 'Ielts 7.0', 'Ielts', 'Advance', 50, 2000]
+    ['INV-01', 'STU-01', 'Tan Huu Toan', 'IE50', 'IE50.1', '05-10-2021', '05-11-2021', '26-10-2021', ''],
+    ['INV-02', 'STU-02', 'Tan Huu Toan', 'IE50', 'IE50.1', '05-10-2021', '05-11-2021', '27-10-2021', ''],
+    ['INV-03', 'STU-03', 'Tan Huu Toan', 'IE60', 'IE60.1', '05-10-2021', '05-11-2021', '01-11-2021', ''],
+    ['INV-04', 'STU-04', 'Tan Huu Toan', 'IE60', 'IE60.1', '05-10-2021', '05-11-2021', '', ''],
+    ['INV-05', 'STU-05', 'Tan Huu Toan', 'IE70', 'IE70.1', '05-10-2021', '05-11-2021', '', ''],
+    ['INV-06', 'STU-06', 'Tan Huu Toan', 'IE70', 'IE70.1', '05-10-2021', '05-11-2021', '', ''],
   ]
 
   return (
     <ThemeProvider theme={createTheme()}>
       <MUIDataTable
-        title={'Courses List'}
+        title={'Invoices List'}
         data={data}
         columns={columns}
         options={options}
@@ -118,4 +126,4 @@ const EnrollmentTable = () => {
   )
 }
 
-export default EnrollmentTable
+export default InvoiceTable

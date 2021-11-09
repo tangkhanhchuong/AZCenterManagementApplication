@@ -3,7 +3,7 @@ import React from 'react'
 import { Breadcrumb } from 'app/components'
 import StudentTable from './StudentTable'
 
-const Student = () => {
+const StudentsList = () => {
   return (
     <div className='m-sm-30'>
       <div className='mb-sm-30'>
@@ -19,4 +19,4 @@ const Student = () => {
   )
 }
 
-export default Student
+export default StudentsList

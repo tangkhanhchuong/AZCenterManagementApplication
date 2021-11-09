@@ -12,7 +12,8 @@ import formsRoutes from './views/forms/FormsRoutes'
 import mapRoutes from './views/map/MapRoutes'
 
 import schedulingRoutes from './modules/Scheduling/SchedulingRoutes'
-import profilesRoutes from './modules/Profiles/ProfilesRoutes'
+import financeRoutes from './modules/Finance/FinanceRoutes'
+import managementRoutes from './modules/Management/ManagementRoutes'
 import chatRoutes from './views/Chat/ChatRoutes'
 
 const redirectRoute = [
@@ -33,9 +34,10 @@ const routes = [
   ...dashboardRoutes,
   ...materialRoutes,
   ...utilitiesRoutes,
+  ...financeRoutes,
   ...chatRoutes,
   ...schedulingRoutes,
-  ...profilesRoutes,
+  ...managementRoutes,
   ...chartsRoute,
   ...dragAndDropRoute,
   ...formsRoutes,
